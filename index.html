@@ -10,15 +10,15 @@
 <meta property="og:description" content="Technology that leaves room for people. Five products from an independent New York studio.">
 <meta property="og:url" content="https://elsebranch.com/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://elsebranch.com/assets/og-card-elsebranch-branch.png">
+<meta property="og:image" content="https://elsebranch.com/assets/og-card-elsebranch-premium.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="ElseBranch — Technology that leaves room for people.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#E9EEEA">
-<link rel="icon" href="/favicon.ico?v=elsebranch-4" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-branch.png?v=elsebranch-4">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=elsebranch-4">
+<link rel="icon" href="favicon.ico?v=elsebranch-5" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-studio.png?v=elsebranch-5">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=elsebranch-5">
 <style>
   @font-face {
     font-family: "Fraunces";
@@ -47,7 +47,7 @@
     --scorch: #EE5626;
     --hardbeet: #BD264D;
     --aurora: #329C81;
-    --branch-accent: #F2764D;
+    --studio-copper: #9C553D;
     --offramp: #F2764D;
     --magpie: #2F6A58;
     --magpie-pick: #D9971F;
@@ -129,79 +129,31 @@
     text-decoration: none;
   }
 
-  .branch-mark {
-    position: relative;
-    display: inline-block;
-    width: 44px;
-    height: 32px;
-    flex: 0 0 auto;
-  }
-
-  .branch-mark::before {
-    content: "";
-    position: absolute;
-    left: 1px;
-    top: 14px;
-    width: 18px;
-    height: 3px;
-    border-radius: 999px;
-    background: var(--ink);
-  }
-
-  .branch-mark::after {
-    content: "";
-    position: absolute;
-    left: 15px;
-    top: 13px;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: var(--ink);
-  }
-
-  .branch-mark i {
-    position: absolute;
-    left: 17px;
-    top: 14px;
+  .brand-mark {
     display: block;
-    width: 27px;
-    height: 3px;
-    border-radius: 999px;
-    background: var(--branch-color);
-    transform: rotate(var(--branch-angle)) scaleX(0);
-    transform-origin: 0 50%;
-    animation: branch-in 0.75s var(--ease) forwards;
-    animation-delay: var(--branch-delay);
+    width: 42px;
+    height: 42px;
+    flex: 0 0 auto;
+    object-fit: contain;
   }
 
-  .branch-mark i:nth-child(1) {
-    --branch-color: var(--ink);
-    --branch-angle: 0deg;
-    --branch-delay: 0.08s;
-  }
-
-  .branch-mark i:nth-child(2) {
-    --branch-color: var(--branch-accent);
-    --branch-angle: 24deg;
-    --branch-delay: 0.18s;
-  }
-
-  @keyframes branch-in {
-    to { transform: rotate(var(--branch-angle)) scaleX(1); }
-  }
-
-  .brand-lockup { display: grid; gap: 1px; }
+  .brand-lockup { display: grid; gap: 4px; }
 
   .brand-name {
-    font-size: 14px;
-    font-weight: 750;
-    letter-spacing: -0.015em;
+    font-family: var(--serif);
+    font-size: 19px;
+    font-variation-settings: "opsz" 72;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 0.95;
   }
 
   .brand-place {
     color: var(--ink-soft);
-    font-size: 10px;
-    letter-spacing: 0.16em;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    line-height: 1.2;
     text-transform: uppercase;
   }
 
@@ -342,7 +294,7 @@
     bottom: -0.11em;
     left: 0.05em;
     height: 4px;
-    background: linear-gradient(90deg, var(--ink) 0 68%, var(--branch-accent) 68% 100%);
+    background: linear-gradient(90deg, var(--ink) 0 68%, var(--studio-copper) 68% 100%);
     border-radius: 999px;
   }
 
@@ -899,7 +851,7 @@
   }
 
   .footer-brand { display: inline-flex; align-items: center; gap: 12px; color: var(--ink); }
-  .footer-brand .branch-mark { width: 35px; transform: scale(0.78); transform-origin: left center; }
+  .footer-brand .brand-mark { width: 28px; height: 28px; }
 
   .site-footer a {
     text-decoration-color: var(--line-strong);
@@ -952,6 +904,7 @@
   @media (max-width: 620px) {
     .shell { width: calc(100% - 32px); }
     .site-header { min-height: 84px; }
+    .brand-mark { width: 38px; height: 38px; }
     .brand-place { display: none; }
     .site-nav { gap: 16px; }
     .site-nav a:nth-child(2) { display: none; }
@@ -994,7 +947,6 @@
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation: none !important; transition: none !important; }
-    .branch-mark i { transform: rotate(var(--branch-angle)) scaleX(1); }
   }
 </style>
 </head>
@@ -1004,10 +956,10 @@
 
 <header class="site-header shell">
   <a class="brand" href="https://elsebranch.com/" aria-label="ElseBranch home">
-    <span class="branch-mark" aria-hidden="true"><i></i><i></i></span>
+    <img class="brand-mark" src="assets/elsebranch-mark.png?v=elsebranch-5" width="42" height="42" alt="" aria-hidden="true">
     <span class="brand-lockup">
       <span class="brand-name">ElseBranch</span>
-      <span class="brand-place">New York</span>
+      <span class="brand-place">Studio · New York</span>
     </span>
   </a>
   <nav class="site-nav" aria-label="Primary navigation">
@@ -1203,7 +1155,7 @@
 </main>
 
 <footer class="site-footer shell">
-  <span class="footer-brand"><span class="branch-mark" aria-hidden="true"><i></i><i></i></span><span>ElseBranch · New York</span></span>
+  <span class="footer-brand"><img class="brand-mark" src="assets/elsebranch-mark.png?v=elsebranch-5" width="28" height="28" alt="" aria-hidden="true"><span>ElseBranch · New York</span></span>
   <span>Scorch · HardBeet · Aurora · Offramp · Magpie Picks · © 2026 ElseBranch Inc.</span>
 </footer>
 
