@@ -4,21 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ElseBranch · Technology that leaves room for people</title>
-<meta name="description" content="ElseBranch is an independent New York studio building Scorch, HardBeet, and Aurora—three products for fair starts, quiet care, and clearer choices.">
+<meta name="description" content="ElseBranch is an independent New York studio building Scorch, HardBeet, Aurora, Offramp, and Magpie Picks—technology that leaves room for people.">
 <link rel="canonical" href="https://elsebranch.com/">
 <meta property="og:title" content="ElseBranch · The Human Measure">
-<meta property="og:description" content="Technology that leaves room for people. Three products from an independent New York studio.">
+<meta property="og:description" content="Technology that leaves room for people. Five products from an independent New York studio.">
 <meta property="og:url" content="https://elsebranch.com/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://elsebranch.com/assets/og-card-elsebranch.png">
+<meta property="og:image" content="https://elsebranch.com/assets/og-card-elsebranch-premium.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="ElseBranch — Technology that leaves room for people.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#E9EEEA">
-<link rel="icon" href="/favicon.ico?v=elsebranch-3" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-three-paths.png?v=elsebranch-3">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=elsebranch-3">
+<link rel="icon" href="favicon.ico?v=elsebranch-5" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-studio.png?v=elsebranch-5">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=elsebranch-5">
 <style>
   @font-face {
     font-family: "Fraunces";
@@ -47,6 +47,11 @@
     --scorch: #EE5626;
     --hardbeet: #BD264D;
     --aurora: #329C81;
+    --studio-copper: #9C553D;
+    --offramp: #F2764D;
+    --magpie: #2F6A58;
+    --magpie-pick: #D9971F;
+    --focus: #BD264D;
     --sans: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
     --serif: "Fraunces", Georgia, serif;
     --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -72,7 +77,7 @@
 
   a:focus-visible,
   button:focus-visible {
-    outline: 2px solid var(--aurora);
+    outline: 3px solid var(--focus);
     outline-offset: 4px;
     border-radius: 2px;
   }
@@ -124,74 +129,31 @@
     text-decoration: none;
   }
 
-  .signal-mark {
-    position: relative;
-    display: inline-block;
-    width: 42px;
-    height: 30px;
-    flex: 0 0 auto;
-  }
-
-  .signal-mark::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 13px;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--ink);
-  }
-
-  .signal-mark i {
-    position: absolute;
-    left: 6px;
-    top: 15px;
+  .brand-mark {
     display: block;
-    width: 34px;
-    height: 2px;
-    border-radius: 999px;
-    background: var(--path-color);
-    transform: rotate(var(--path-angle)) scaleX(0);
-    transform-origin: 0 50%;
-    animation: path-in 0.75s var(--ease) forwards;
-    animation-delay: var(--path-delay);
+    width: 42px;
+    height: 42px;
+    flex: 0 0 auto;
+    object-fit: contain;
   }
 
-  .signal-mark i:nth-child(1) {
-    --path-color: var(--scorch);
-    --path-angle: -23deg;
-    --path-delay: 0.06s;
-  }
-
-  .signal-mark i:nth-child(2) {
-    --path-color: var(--hardbeet);
-    --path-angle: 0deg;
-    --path-delay: 0.14s;
-  }
-
-  .signal-mark i:nth-child(3) {
-    --path-color: var(--aurora);
-    --path-angle: 23deg;
-    --path-delay: 0.22s;
-  }
-
-  @keyframes path-in {
-    to { transform: rotate(var(--path-angle)) scaleX(1); }
-  }
-
-  .brand-lockup { display: grid; gap: 1px; }
+  .brand-lockup { display: grid; gap: 4px; }
 
   .brand-name {
-    font-size: 14px;
-    font-weight: 750;
-    letter-spacing: -0.015em;
+    font-family: var(--serif);
+    font-size: 19px;
+    font-variation-settings: "opsz" 72;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 0.95;
   }
 
   .brand-place {
     color: var(--ink-soft);
-    font-size: 10px;
-    letter-spacing: 0.16em;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    line-height: 1.2;
     text-transform: uppercase;
   }
 
@@ -332,7 +294,7 @@
     bottom: -0.11em;
     left: 0.05em;
     height: 4px;
-    background: linear-gradient(90deg, var(--scorch) 0 33.33%, var(--hardbeet) 33.33% 66.66%, var(--aurora) 66.66% 100%);
+    background: linear-gradient(90deg, var(--ink) 0 68%, var(--studio-copper) 68% 100%);
     border-radius: 999px;
   }
 
@@ -348,7 +310,7 @@
 
   .promise-line {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     margin-top: 70px;
     border-top: 1px solid var(--line);
   }
@@ -376,6 +338,8 @@
   .promise-line span:nth-child(1) { --signal: var(--scorch); }
   .promise-line span:nth-child(2) { --signal: var(--hardbeet); }
   .promise-line span:nth-child(3) { --signal: var(--aurora); }
+  .promise-line span:nth-child(4) { --signal: var(--offramp); }
+  .promise-line span:nth-child(5) { --signal: var(--magpie); }
 
   .section {
     padding: clamp(88px, 11vw, 136px) 0;
@@ -438,19 +402,21 @@
     transition: transform 0.4s var(--ease);
   }
 
-  .project:hover,
-  .project:focus-visible {
+  a.project:hover,
+  a.project:focus-visible {
     padding-right: 32px;
     padding-left: 24px;
     background: var(--wash);
   }
 
-  .project:hover::before,
-  .project:focus-visible::before { transform: scaleY(1); }
+  a.project:hover::before,
+  a.project:focus-visible::before { transform: scaleY(1); }
 
   .project--scorch { --project: var(--scorch); --wash: rgba(238, 86, 38, 0.07); }
   .project--hardbeet { --project: var(--hardbeet); --wash: rgba(189, 38, 77, 0.07); }
   .project--aurora { --project: var(--aurora); --wash: rgba(50, 156, 129, 0.08); }
+  .project--offramp { --project: var(--offramp); --wash: rgba(242, 118, 77, 0.08); }
+  .project--magpie { --project: var(--magpie); --wash: rgba(47, 106, 88, 0.08); }
 
   .project-index {
     padding-top: 8px;
@@ -534,6 +500,8 @@
     letter-spacing: 0.07em;
     text-transform: uppercase;
   }
+
+  .project-visit--quiet { color: var(--ink-soft); }
 
   .project-visit span {
     color: var(--project);
@@ -682,6 +650,93 @@
   .project:hover .route-needle,
   .project:focus-visible .route-needle { transform: rotate(-18deg); }
 
+  .fork {
+    position: relative;
+    height: 100%;
+  }
+
+  .fork span {
+    position: absolute;
+    top: 69px;
+    height: 5px;
+    border-radius: 999px;
+  }
+
+  .fork-trunk {
+    left: 10px;
+    width: 72px;
+    background: rgba(242, 118, 77, 0.42);
+    background: color-mix(in srgb, currentColor 42%, transparent);
+  }
+
+  .fork-main {
+    left: 76px;
+    width: 94px;
+    background: rgba(242, 118, 77, 0.42);
+    background: color-mix(in srgb, currentColor 42%, transparent);
+  }
+
+  .fork-exit {
+    left: 75px;
+    width: 104px;
+    background: currentColor;
+    transform: rotate(31deg);
+    transform-origin: 0 50%;
+    transition: transform 0.65s var(--ease);
+  }
+
+  .fork::after {
+    content: "";
+    position: absolute;
+    top: 68px;
+    left: 73px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  .project:hover .fork-exit,
+  .project:focus-visible .fork-exit { transform: rotate(38deg); }
+
+  .deck {
+    position: relative;
+    height: 100%;
+  }
+
+  .deck-card {
+    position: absolute;
+    bottom: 18px;
+    left: 64px;
+    width: 54px;
+    height: 88px;
+    border: 2px solid currentColor;
+    border-radius: 7px;
+    background: var(--chalk);
+    transform: rotate(var(--card-angle));
+    transform-origin: 50% 100%;
+    transition: transform 0.65s var(--ease);
+  }
+
+  .deck-card:nth-child(1) { --card-angle: -24deg; }
+  .deck-card:nth-child(2) { --card-angle: -12deg; }
+  .deck-card:nth-child(3) {
+    --card-angle: 0deg;
+    border-color: var(--magpie-pick);
+    background: var(--magpie-pick);
+  }
+  .deck-card:nth-child(4) { --card-angle: 12deg; }
+  .deck-card:nth-child(5) { --card-angle: 24deg; }
+
+  .project:hover .deck-card:nth-child(1),
+  .project:focus-visible .deck-card:nth-child(1) { transform: rotate(-31deg); }
+  .project:hover .deck-card:nth-child(2),
+  .project:focus-visible .deck-card:nth-child(2) { transform: rotate(-16deg); }
+  .project:hover .deck-card:nth-child(4),
+  .project:focus-visible .deck-card:nth-child(4) { transform: rotate(16deg); }
+  .project:hover .deck-card:nth-child(5),
+  .project:focus-visible .deck-card:nth-child(5) { transform: rotate(31deg); }
+
   .note-grid {
     display: grid;
     grid-template-columns: minmax(190px, 3fr) minmax(0, 8fr);
@@ -796,7 +851,7 @@
   }
 
   .footer-brand { display: inline-flex; align-items: center; gap: 12px; color: var(--ink); }
-  .footer-brand .signal-mark { width: 33px; transform: scale(0.78); transform-origin: left center; }
+  .footer-brand .brand-mark { width: 28px; height: 28px; }
 
   .site-footer a {
     text-decoration-color: var(--line-strong);
@@ -849,6 +904,7 @@
   @media (max-width: 620px) {
     .shell { width: calc(100% - 32px); }
     .site-header { min-height: 84px; }
+    .brand-mark { width: 38px; height: 38px; }
     .brand-place { display: none; }
     .site-nav { gap: 16px; }
     .site-nav a:nth-child(2) { display: none; }
@@ -891,7 +947,6 @@
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation: none !important; transition: none !important; }
-    .signal-mark i { transform: rotate(var(--path-angle)) scaleX(1); }
   }
 </style>
 </head>
@@ -901,10 +956,10 @@
 
 <header class="site-header shell">
   <a class="brand" href="https://elsebranch.com/" aria-label="ElseBranch home">
-    <span class="signal-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+    <img class="brand-mark" src="assets/elsebranch-mark.png?v=elsebranch-5" width="42" height="42" alt="" aria-hidden="true">
     <span class="brand-lockup">
       <span class="brand-name">ElseBranch</span>
-      <span class="brand-place">New York</span>
+      <span class="brand-place">Studio · New York</span>
     </span>
   </a>
   <nav class="site-nav" aria-label="Primary navigation">
@@ -935,11 +990,13 @@
     <div class="hero-main">
       <p class="hero-meta">Independent studio · New York · 2026</p>
       <h1 id="hero-title">Technology that leaves room <span class="human-word">for people.</span></h1>
-      <p class="hero-lede"><strong>ElseBranch</strong> is an independent New York studio building three products for fair starts, quiet care, and clearer choices.</p>
+      <p class="hero-lede"><strong>ElseBranch</strong> is an independent New York studio building a small portfolio around fair starts, quiet care, clearer choices, deliberate exits, and finite discovery.</p>
       <div class="promise-line" aria-label="ElseBranch product themes">
         <span>Fair starts</span>
         <span>Quiet care</span>
         <span>Clearer choices</span>
+        <span>Deliberate exits</span>
+        <span>Finite discovery</span>
       </div>
     </div>
   </section>
@@ -947,16 +1004,16 @@
   <section class="section" id="work" aria-labelledby="work-title">
     <header class="section-heading">
       <p class="section-kicker"><span>01</span> / Current systems</p>
-      <h2 id="work-title">Three products. One measure.</h2>
+      <h2 id="work-title">Five products. One measure.</h2>
     </header>
 
     <div class="project-list">
-      <a class="project project--scorch" href="https://scorchapp.xyz/" aria-label="Visit Scorch, iOS pilot">
+      <a class="project project--scorch" href="https://scorchapp.xyz/" aria-label="Visit Scorch, TestFlight candidate">
         <span class="project-index">01—A</span>
         <div class="project-copy">
           <div class="project-name-row">
             <h3>Scorch</h3>
-            <span class="status">iOS pilot</span>
+            <span class="status">TestFlight candidate</span>
           </div>
           <dl class="project-frame">
             <div>
@@ -975,12 +1032,12 @@
         </div>
       </a>
 
-      <a class="project project--hardbeet" href="https://gethardbeet.com" aria-label="Visit HardBeet, MVP hardening">
+      <a class="project project--hardbeet" href="https://gethardbeet.com" aria-label="Visit HardBeet, private beta">
         <span class="project-index">01—B</span>
         <div class="project-copy">
           <div class="project-name-row">
             <h3>HardBeet</h3>
-            <span class="status">MVP hardening</span>
+            <span class="status">Private beta</span>
           </div>
           <dl class="project-frame">
             <div>
@@ -1022,6 +1079,54 @@
           <span class="route-arc"></span><span class="route-dot route-dot--start"></span><span class="route-dot route-dot--end"></span><span class="route-needle"></span>
         </div>
       </a>
+
+      <article class="project project--offramp" aria-labelledby="offramp-title">
+        <span class="project-index">01—D</span>
+        <div class="project-copy">
+          <div class="project-name-row">
+            <h3 id="offramp-title">Offramp</h3>
+            <span class="status">TestFlight candidate</span>
+          </div>
+          <dl class="project-frame">
+            <div>
+              <dt>Tension</dt>
+              <dd>Nighttime scrolling keeps offering one more thing when what you need is a clean way out.</dd>
+            </div>
+            <div>
+              <dt>Promise</dt>
+              <dd>Offramp interrupts the loop with one calm, finite step and a deliberate phone-down handoff.</dd>
+            </div>
+          </dl>
+          <span class="project-visit project-visit--quiet">Private build</span>
+        </div>
+        <div class="project-diagram fork" aria-hidden="true">
+          <span class="fork-trunk"></span><span class="fork-main"></span><span class="fork-exit"></span>
+        </div>
+      </article>
+
+      <article class="project project--magpie" aria-labelledby="magpie-title">
+        <span class="project-index">01—E</span>
+        <div class="project-copy">
+          <div class="project-name-row">
+            <h3 id="magpie-title">Magpie Picks</h3>
+            <span class="status">Concept prototype</span>
+          </div>
+          <dl class="project-frame">
+            <div>
+              <dt>Tension</dt>
+              <dd>Useful independent apps can be hard to find in ranked, open-ended discovery.</dd>
+            </div>
+            <div>
+              <dt>Promise</dt>
+              <dd>Magpie Picks explores a finite editorial deck: ten picks, then it ends.</dd>
+            </div>
+          </dl>
+          <span class="project-visit project-visit--quiet">Private concept</span>
+        </div>
+        <div class="project-diagram deck" aria-hidden="true">
+          <span class="deck-card"></span><span class="deck-card"></span><span class="deck-card"></span><span class="deck-card"></span><span class="deck-card"></span>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -1032,7 +1137,7 @@
       </div>
       <div>
         <h2 class="sr-only" id="note-title">A note from ElseBranch, New York</h2>
-        <p class="note-copy">Most systems begin with a default. At ElseBranch, we look for the path that leaves more room for people. A running race, a daily check-in, and a cruise decision each ask the same question: how can technology help without crowding out <em>agency, dignity, or imagination?</em> We build from New York, keeping the studio small enough to stay close to the details and honest about what each product is ready to promise. The products do not need to look alike; they need to share a measure: useful systems, considered constraints, and room for people to remain more than inputs.</p>
+        <p class="note-copy">A race can make room for different paces. Care can reassure without surveillance. Travel choices can be explained. A nighttime nudge can be designed to end attention rather than extend it. Discovery can stop. From a distance, these are separate categories. Up close, each is a decision about how much a system should take over. We choose the other branch: enough structure to help, enough restraint to leave <em>agency, dignity, and imagination</em> intact. We build from New York, keeping the studio small enough to stay close to the details and honest about what each product is ready to promise.</p>
         <p class="signature"><span>ElseBranch Studio</span><span>New York</span><span>Summer 2026</span></p>
       </div>
     </div>
@@ -1040,17 +1145,18 @@
 
   <section class="contact" id="contact" aria-labelledby="contact-title">
     <p class="contact-label">03 / Contact</p>
-    <h2 id="contact-title">Something here <em>resonate?</em> Send a note.</h2>
+    <h2 id="contact-title">Does something here <em>resonate?</em> Send a note.</h2>
     <div class="contact-links">
       <a href="mailto:hello@elsebranch.com">hello@elsebranch.com</a>
+      <a href="mailto:legal@elsebranch.com">Legal inquiries</a>
       <a href="https://github.com/caniseri">GitHub</a>
     </div>
   </section>
 </main>
 
 <footer class="site-footer shell">
-  <span class="footer-brand"><span class="signal-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>ElseBranch · New York</span></span>
-  <span>Scorch · HardBeet · Aurora · © 2026</span>
+  <span class="footer-brand"><img class="brand-mark" src="assets/elsebranch-mark.png?v=elsebranch-5" width="28" height="28" alt="" aria-hidden="true"><span>ElseBranch · New York</span></span>
+  <span>Scorch · HardBeet · Aurora · Offramp · Magpie Picks · © 2026 ElseBranch Inc.</span>
 </footer>
 
 </body>
